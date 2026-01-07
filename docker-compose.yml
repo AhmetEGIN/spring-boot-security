@@ -1,0 +1,14 @@
+services:
+  database:
+    container_name: mysql_database
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: test
+      MYSQL_DATABASE: spring-boot-security
+      MYSQL_USER: egin
+      MYSQL_PASSWORD: test
+    volumes:
+      - ./db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
