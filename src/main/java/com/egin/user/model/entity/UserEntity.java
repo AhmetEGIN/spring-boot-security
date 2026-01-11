@@ -41,8 +41,8 @@ public class UserEntity extends BaseEntity {
         final Map<String, Object> claims = new HashMap<>();
 
         claims.put(TokenClaims.USER_ID.getValue(), this.getId());
-        claims.put(TokenClaims.USER_TYPE.getValue(), this.getUserType());
-        claims.put(TokenClaims.USER_STATUS.getValue(), this.getUserStatus());
+        claims.put(TokenClaims.USER_TYPE.getValue(), this.getUserType().name());
+        claims.put(TokenClaims.USER_STATUS.getValue(), this.getUserStatus().name());
         claims.put(TokenClaims.USER_FIRST_NAME.getValue(), this.getFirstName());
         claims.put(TokenClaims.USER_LAST_NAME.getValue(), this.getLastName());
         claims.put(TokenClaims.USER_EMAIL.getValue(), this.getEmail());

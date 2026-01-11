@@ -39,3 +39,4 @@ public class UserLoginServiceImpl implements UserLoginService {
         return tokenService.generateToken(userEntity.getClaims());
     }
 }
+

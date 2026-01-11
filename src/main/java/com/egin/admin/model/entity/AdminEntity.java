@@ -43,8 +43,8 @@ public class AdminEntity extends BaseEntity {
         final Map<String, Object> claims = new HashMap<>();
 
         claims.put(TokenClaims.USER_ID.getValue(), id);
-        claims.put(TokenClaims.USER_TYPE.getValue(), userType);
-        claims.put(TokenClaims.USER_STATUS.getValue(), userStatus);
+        claims.put(TokenClaims.USER_TYPE.getValue(), userType.name());
+        claims.put(TokenClaims.USER_STATUS.getValue(), userStatus.name());
         claims.put(TokenClaims.USER_EMAIL.getValue(), email);
         claims.put(TokenClaims.USER_FIRST_NAME.getValue(), firstName);
         claims.put(TokenClaims.USER_LAST_NAME.getValue(), lastName);
